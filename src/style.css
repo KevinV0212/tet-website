@@ -234,6 +234,27 @@ width: 100%;
     color: var(--color-secondary);
 }
 
+.banner-top {
+    height:250px;
+}
+.banner-top img {
+    display:block;
+    height: 100%;
+    width: auto;
+    margin:auto;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .banner-top {
+        height:300px;
+    }
+
+    .banner-top img {
+        border-radius:10px;
+    }
+}
+
 ul {
     list-style:none;
 }
@@ -313,7 +334,13 @@ footer span{
     margin: 15px 0;
     background-color: var(--color-secondary);
 }
-
+.banner-bottom{
+    height:30px;
+    background-image: url(./img/footer-banner.png);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: bottom 0 center;
+}
 
 .box-shadow {
 

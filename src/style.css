@@ -76,8 +76,9 @@ h2 {
     margin: 0 auto;
 }
 
+
 .wrap section{
-    padding-top:60px;
+    padding-top:40px;
     width: 100%;
 }
 
@@ -254,6 +255,7 @@ width: 100%;
         border-radius:10px;
     }
 }
+
 
 ul {
     list-style:none;

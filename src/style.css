@@ -11,7 +11,7 @@
     --color-primary: #FFCC00;
     --color-secondary: #FFF9E9;
     --color-accent: #F5000C;
-
+    --box-shadow-basic: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* reset start */
@@ -89,6 +89,7 @@ h2 {
     border-radius: 10px;
     background-color: var(--color-text);
     color: var(--color-secondary);
+    
 }
 
 .nav-btn {
@@ -253,6 +254,7 @@ width: 100%;
 
     .banner-top img {
         border-radius:10px;
+        box-shadow: var(--box-shadow-basic);
     }
 }
 
@@ -271,6 +273,8 @@ li {
     border-radius: 10px;
 
     background: var(--color-secondary);
+    box-shadow: var(--box-shadow-basic);
+
 }
 .card-inner{
     display:flex;
@@ -310,7 +314,7 @@ li {
 footer {
     text-align: center;
     margin-top: 60px;
-    padding: 10px;
+    padding: 20px;
     background-color: var(--color-text);
     color: var(--color-secondary);
 }
@@ -322,11 +326,36 @@ footer {
 .socials {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap:30px;
 }
 
+.social a{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    text-decoration:none;
+}
+
+a:visited{
+    color:var(--color-secondary);
+}
+
+.social:hover {
+    transform: translateY(-10px);
+}
+
+.social:active{
+    filter:brightness(.7);
+}
+
+.icon{
+    font-size:2.5rem;
+}
+
 .copyright {
-    margin-top:20px;
+    margin-top:10px;
 }
 
 footer span{
@@ -345,6 +374,6 @@ footer span{
 }
 
 .box-shadow {
-
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; 
 }
 

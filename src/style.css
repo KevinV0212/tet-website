@@ -38,6 +38,77 @@ html {
     height: auto;
 }
 /* reset end */
+a{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+}
+
+.header{
+  display: none;
+    box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 249, 233, 0.93);
+  height: 100vh;
+  z-index: 3;
+}
+
+.header-logo{
+    margin:0 auto;
+    max-width:200px;
+}
+
+.header-logo img {
+    width: 100%;
+}
+header .nav-menu{
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+}
+
+a > img:hover{
+    opacity: 0.6;
+    transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
+}
+
+
+.nav-item a{
+    display:block;
+    margin: 0 auto;
+    font-family: 'Yeseva One', sans-serif;
+    font-size:1.5rem;
+}
+header a:visited{
+    color:var(--color-text)
+}
+
+.nav-item:hover{
+    transform: translateX(-20px);
+    transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
+}
+.nav-item:active{
+    filter:brightness(1.7);
+    transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
+
+}
+
+header .social:active{
+    filter:brightness(1.7);
+    transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
+
+}
+hr{
+    display:block;
+    height:2px; 
+    width: 100%;
+    margin: 15px 0;
+    background-color: var(--color-text);
+}
 
 body {
     background-color: var(--color-bg);
@@ -121,7 +192,9 @@ h2 {
     border-radius: 0 0 0 20px;
     transition: background-color 1s ease-out;
 }
-
+.nav-btn:hover{
+    cursor:pointer;
+}
 @media screen and (min-width: 768px) {
     .nav-btn {
         width: 80px;
@@ -263,9 +336,7 @@ ul {
     list-style:none;
 }
 
-li {
-    margin-bottom: 20px;
-}
+
 
 .card {
     width: 100%;
@@ -330,23 +401,18 @@ footer {
     gap:30px;
 }
 
-.social a{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap:5px;
-    text-decoration:none;
-}
 
-a:visited{
+footer a:visited{
     color:var(--color-secondary);
 }
 
+
 .social:hover {
     transform: translateY(-10px);
+    transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
 }
 
-.social:active{
+footer .social:active{
     filter:brightness(.7);
 }
 
@@ -357,14 +423,10 @@ a:visited{
 .copyright {
     margin-top:10px;
 }
-
-footer span{
-    display:block;
-    height:2px; 
-    width: 100%;
-    margin: 15px 0;
+footer hr {
     background-color: var(--color-secondary);
 }
+
 .banner-bottom{
     height:30px;
     background-image: url(./img/footer-banner.png);

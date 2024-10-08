@@ -10,11 +10,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/07de4dcbe0.js" crossorigin="anonymous"></script>
-</head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script></head>
 <body>
     <div class="wrap">
-        <header style="display: none">
-            header
+        <header class="header">
+            <div class="header-inner">
+                <h1 class="header-logo">
+                    <a href="https://www.philipminh.church">
+                        <img src="./img/logo.png" alt="church logo">
+                    </a>
+                </h1>  
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#summary">Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#venue">Venue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#raffle">Raffle</a>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="socials">
+                    <li class="social">
+                        <a href="https://www.facebook.com/Hoitetvenguonorlando/"  target="_blank">
+                            <i class="fa-brands fa-square-facebook icon"></i><p>Facebook</p>
+                        </a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.instagram.com/orlandotetfestival/?hl=en"  target="_blank">
+                            <i class="fa-brands fa-square-instagram icon"></i><p>Instagram</p>
+                        </a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.philipminh.church" target="_blank">
+                            <i class="fa-solid fa-church icon" ></i><p>Church</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </header>
         <div class="nav-btn" onClick="handleNavAnimation()">
             <div>
@@ -25,31 +66,32 @@
             <p class="text-sm">Menu</p>
         </div>
             
+        <header></header>
         <div class="banner-top">
             <img src="./img/top-banner-desktop-v2.jpg" alt="top banner" height="100%" width="auto">
         </div>
         <div class="content">
-            <section class="summary">
+            <section id="summary" class="summary">
                 <div class="card">
                     <h1 class="card-header">Tết 2024 - Year of the Dragon</h1>
                     <div class="card-inner">Come join us at our 30th Annual Vietnamese lunar new year festival. This year, we are celebrating the year of the dragon, the luckiest of all Zodiac animals. Those born in the year of the dragon possess remarkable qualities such as  cleverness, charm, eloquence, and even wealth.</div>
                 </div>
             </section>
             <div class="time-ven">
-                <section class="schedule">
+                <section id="schedule" class="schedule">
                     <h1 class="section-heading">Schedule</h1>
                     <div class="card">
                         <div class="card-inner">Schedule Content</div>
                     </div>
                 </section>
-                <section class="venue">
+                <section id="venue" class="venue">
                     <h1 class="section-heading">Venue</h1>
                     <div class="card">
                         <div class="card-inner">Map</div>
                     </div>
                 </section>
             </div>
-            <section class="raffle">
+            <section id="raffle" class="raffle">
                 <h1 class="section-heading">Raffle</h1>
                 <div class="card">
                     <div class="card-inner">
@@ -60,7 +102,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section id="contact" class="contact">
                 <h1 class="section-heading">Contact Information</h1>
                 <div class="card">
                     <ul class="contacts">
@@ -95,33 +137,43 @@
             </section>
         </div>
         <footer>
-            <div class="socials">
-                
-                <div class="social">
+            <ul class="socials">
+                <li class="social">
                     <a href="https://www.facebook.com/Hoitetvenguonorlando/"  target="_blank">
-                        <i class="fa-brands fa-square-facebook icon"></i>Facebook
+                        <i class="fa-brands fa-square-facebook icon"></i><p>Facebook</p>
                     </a>
-                </div>
-                <div class="social">
+                </li>
+                <li class="social">
                     <a href="https://www.instagram.com/orlandotetfestival/?hl=en"  target="_blank">
-                        <i class="fa-brands fa-square-instagram icon"></i>Instagram
+                        <i class="fa-brands fa-square-instagram icon"></i><p>Instagram</p>
                     </a>
-                </div>
-                <div class="social">
+                </li>
+                <li class="social">
                     <a href="https://www.philipminh.church" target="_blank">
-                        <i class="fa-solid fa-church icon" ></i>Church
+                        <i class="fa-solid fa-church icon" ></i><p>Church</p>
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
             <p class="copyright">© 2004 - 2024 Copyright Philiphe Phan Van Minh. All Rights Reserved.</p>
-            <span></span>
+            <hr>
             <div class="banner-bottom"></div>
         </footer>
     </div>
-    <script>
-        function handleNavAnimation () {
-            document.querySelector(".nav-btn").classList.toggle("btn_open");
-        }
+    <script defer>
+        $(function(){
+            $('.nav-btn').click(function(){
+            $(".nav-btn").toggleClass('btn_open');
+            $(".header").slideToggle(500);
+            $("nav").toggleClass('open');
+            });
+
+        });
+
+        $(function(){
+            $(".nav-item").click(function(){
+                $(".header").slideToggle(500);
+            })
+        })
     </script>
 </body>
 </html>

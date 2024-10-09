@@ -92,13 +92,13 @@ header a:visited{
     transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
 }
 .nav-item:active{
-    filter:brightness(1.7);
+    opacity: 0.6;
     transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
 
 }
 
 header .social:active{
-    filter:brightness(1.7);
+    opacity: 0.6;
     transition: all cubic-bezier(0.47, 0, 0.745, 0.715) 150ms;
 
 }
@@ -374,6 +374,16 @@ ul {
 
 }
 
+.venue iframe {
+    width: 100%;
+    height: 250px;
+}
+@media screen and (min-width: 768px) {
+    .venue iframe {
+        height: 350px;
+    }
+
+}
 .contacts {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -413,7 +423,7 @@ footer a:visited{
 }
 
 footer .social:active{
-    filter:brightness(.7);
+    opacity: 0.6;
 }
 
 .icon{

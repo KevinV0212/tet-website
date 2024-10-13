@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tet 2024</title>
-    <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/07de4dcbe0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script></head>
+    <script src="./common.js" type="module" defer></script>
 <body>
     <div class="wrap">
         <header class="header">
@@ -98,9 +100,60 @@
                 <div class="card">
                     <div class="card-inner">
                         <h3 class="card-header">Grand Prize</h3>
-                        Carousel
-                        <h3 class="card-header">All Prices</h3>
-                        Carousel
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                              <div class="swiper-slide">
+                                <img src="./img/rav4/front.png" alt="">
+                                <div class="caption">Grand Prize: 2024 Toyota Rav4</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./img/rav4/side.png" alt="">
+                                <p class="caption">Grand Prize: 2024 Toyota Rav4</p>
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./img/rav4/back.png" alt="">
+                                <p class="caption">Grand Prize: 2024 Toyota Rav4</p>
+                              </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                          
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                          
+                            <!-- If we need scrollbar -->
+                          </div>
+                        <hr>
+                        <h3 class="card-header">All Prizes</h3>
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                              <div class="swiper-slide">
+                                <img src="./img/rav4/front.png" alt="">
+                                <div class="caption">Grand Prize: 2024 Toyota Rav4</div>
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./img/rav4/side.png" alt="">
+                                <p class="caption">Grand Prize: 2024 Toyota Rav4</p>
+                              </div>
+                              <div class="swiper-slide">
+                                <img src="./img/rav4/back.png" alt="">
+                                <p class="caption">Grand Prize: 2024 Toyota Rav4</p>
+                              </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                          
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                          
+                            <!-- If we need scrollbar -->
+                          </div>
                     </div>
                 </div>
             </section>
@@ -161,21 +214,5 @@
             <div class="banner-bottom"></div>
         </footer>
     </div>
-    <script defer>
-        $(function(){
-            $('.nav-btn').click(function(){
-            $(".nav-btn").toggleClass('btn_open');
-            $(".header").slideToggle(500);
-            $("nav").toggleClass('open');
-            });
-
-        });
-
-        $(function(){
-            $(".nav-item").click(function(){
-                $(".header").slideToggle(500);
-            })
-        })
-    </script>
 </body>
 </html>

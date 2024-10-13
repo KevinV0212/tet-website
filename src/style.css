@@ -449,3 +449,38 @@ footer hr {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; 
 }
 
+
+.swiper {
+    position:relative;
+    width: 100%;
+}
+
+.swiper-pagination {
+    margin: 10px 0;
+    position:relative;
+}
+.swiper-slide {
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+}
+.swiper img {
+    margin: 0 auto;
+    max-height: 400px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    color: var(--color-text);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color-text);
+}
+
+.caption {
+    color: var(--color-secondary); 
+    font-size: .7 rem; /* Adjust the font size */
+    background-color: var(--color-text); 
+    padding: 10px;
+    border-radius: 5px;
+  }

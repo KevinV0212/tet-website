@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tet</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <nav>
+                <h1 class="header-logo">
+                    <a href="https://www.philipminh.church">
+                        <img src="./img/logo.png" alt="church logo" target="_blank">
+                    </a>
+                </h1>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#summary">Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#venue">Venue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#raffle">Raffle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="socials">
+                    <li class="social">
+                        <a href="https://www.facebook.com/Hoitetvenguonorlando/" target="_blank">
+                            <i class="fa-brands fa-square-facebook icon"></i><p>Facebook</p>
+                        </a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.instagram.com/orlandotetfestival/?hl=en" target="_blank">
+                            <i class="fa-brands fa-square-instagram icon"></i><p>Instagram</p>
+                        </a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.philipminh.church" target="_blank">
+                            <i class="fa-solid fa-church icon"></i><p>Church</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <button class="nav-btn" onClick="handleNavAnimation()">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <p class="text-sm">Menu</p>
+    </button>
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <ul class="socials">
+            <li class="social">
+                <a href="https://www.facebook.com/Hoitetvenguonorlando/" target="_blank">
+                    <i class="fa-brands fa-square-facebook icon"></i><p>Facebook</p>
+                </a>
+            </li>
+            <li class="social">
+                <a href="https://www.instagram.com/orlandotetfestival/?hl=en" target="_blank">
+                    <i class="fa-brands fa-square-instagram icon"></i><p>Instagram</p>
+                </a>
+            </li>
+            <li class="social">
+                <a href="https://www.philipminh.church" target="_blank">
+                    <i class="fa-solid fa-church icon"></i><p>Church</p>
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">© 2004 - 2024 Copyright Philiphe Phan Van Minh. All Rights Reserved.</p>
+        <hr>
+        <div class="banner-bottom"></div>
+    </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/07de4dcbe0.js" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" type="module" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

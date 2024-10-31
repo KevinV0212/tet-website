@@ -38,10 +38,11 @@ html {
     height: auto;
 }
 /* reset end */
-a{
+a {
     display:block;
     text-align:center;
     text-decoration:none;
+    color: var(--color-text);
 }
 
 .header{
